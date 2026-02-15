@@ -1,39 +1,14 @@
-# 🧠 MH Narrative Dashboard
+# More than Decision Support: Exploring Patients’ Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys
 
-Frontend interface of the MIND and FACT (baseline) dashboards.
 
----
+## 🔗 Quick Links
+* **[Paper Page](https://minadocyc.github.io/More-Than-Decision-Making/)**
 
-## 🚀 Tech Stack
+## 📖 Abstract
+Large language models (LLMs) have been increasingly adopted to support patients' healthcare-seeking in recent years. While prior patient-centered studies have examined the capabilities and experience of LLM-based tools in specific health-related tasks such as information-seeking, diagnosis, or decision-supporting, the inherently longitudinal nature of healthcare in real-world practice has been underexplored. This paper presents a four-week diary study with 25 patients to examine LLMs' roles across healthcare-seeking trajectories. Our analysis reveals that patients integrate LLMs not just as simple decision-support tools, but as dynamic companions that scaffold their journey across behavioral, informational, emotional, and cognitive levels. Meanwhile, patients actively assign diverse socio-technical meanings to LLMs, altering the traditional dynamics of agency, trust, and power in patient-provider relationships. Drawing from these findings, we conceptualize future LLMs as a longitudinal boundary companion that continuously mediates between patients and clinicians throughout longitudinal healthcare-seeking trajectories.
 
-| Feature                    | Tool                      |
-|----------------------------|---------------------------|
-| Package Manager            | [npm](https://www.npmjs.com/) |
-| Build Tool & Bootstrapper  | [Vite](https://vitejs.dev/) |
-| UI Library                 | [ShadCN UI](https://ui.shadcn.com/) |
-| Styling Utility            | [Tailwind CSS](https://tailwindcss.com/) |
-| State Management           | [Zustand](https://zustand-demo.pmnd.rs/) |
-| Routing                    | [React Router DOM](https://reactrouter.com/) |
-| Data Visualization         | [Recharts](https://recharts.org/) |
+## 🎥 Demo Video
+This repository contains the teaser video (`Teaser_Video.mp4`) used for the conference presentation, showcasing the core result.
 
----
-
-## 📂 Project Setup
-
-### 1. Open mh-narrative-dashboard FE code
-```cd mh-narrative-dashboard/FE-mh-narrative-dashboard```
-
-### 2. Install dependencies
-```npm install```
-
-### 3. Run the development server
-```npm run dev```
-
-The app will start on http://localhost:5173.
-
-### 4. Build for production
-```npm run build```
-This will generate a dist/ folder with optimized static files.
-
-### 5. Preview the production build
-```npm run preview```
+## 🎓 Citation (BibTeX)
+to appear soon!
