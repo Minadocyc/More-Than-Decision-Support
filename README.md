@@ -12,13 +12,8 @@ This repository contains the teaser video (`Teaser_Video.mp4`) used for the conf
 
 ## 🎓 Citation (BibTeX)
 @article{cao2026more,
-
   title={More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys},
-
   author={Cao, Yancheng and Ji, Yishu and Fu, Chris Yue and Dharmavaram, Sahiti and Turchioe, Meghan and Benda, Natalie C and Mamykina, Lena and Sun, Yuling and Xu, Xuhai and others},
-
   journal={arXiv preprint arXiv:2602.14733},
-
   year={2026}
-  
 }
