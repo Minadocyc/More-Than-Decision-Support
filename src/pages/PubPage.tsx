@@ -141,7 +141,7 @@ export default function PubPage() {
 
           {/* Caption with Tailwind underline styling */}
           <p className="text-sm text-muted-foreground text-center italic max-w-xl mx-auto leading-normal underline underline-offset-4">
-            [Short video shows the core result]
+            [Teaser video presenting the core longitudinal findings of our study.]
           </p>
         </section>
 
