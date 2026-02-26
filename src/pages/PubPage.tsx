@@ -47,10 +47,10 @@ const affiliationLogos: Record<string, string> = {
 
 // 这里的 BibTeX 字符串保持多行格式
 const bibliography = `@article{cao2026more,
-  title={More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys},
-  author={Cao, Yancheng and Ji, Yishu and Fu, Chris Yue and Dharmavaram, Sahiti and Turchioe, Meghan and Benda, Natalie C and Mamykina, Lena and Sun, Yuling and Xu, Xuhai and others},
-  journal={arXiv preprint arXiv:2602.14733},
-  year={2026}
+title={More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys},
+author={Cao, Yancheng and Ji, Yishu and Fu, Chris Yue and Dharmavaram, Sahiti and Turchioe, Meghan and Benda, Natalie C and Mamykina, Lena and Sun, Yuling and Xu, Xuhai and others},
+journal={arXiv preprint arXiv:2602.14733},
+year={2026}
 }`;
 
 export default function PubPage() {
