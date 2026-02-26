@@ -7,7 +7,6 @@ import PassiveSensingTab from "@/components/BaseLine/PassiveSensing/PassiveSensi
 import ClinicalNotesTab from "@/components/BaseLine/ClinicalNotes/ClinicalNotesTab";
 import TranscriptionTab from "@/components/BaseLine/Transcription/TranscriptionTab";
 import SurveyScoreTab from "@/components/BaseLine/SurveyScore/SurveyScoreTab";
-import MINDTab from "@/pages/MINDTab";
 import { Watch, MessageSquare, StickyNote, ClipboardList, WandSparkles } from "lucide-react";
 import type { TabItem, HomePageTabKey, TabKey } from "@/types/dataTypes";
 import {nameListMap, retrospectHorizon} from "@/data/data";
@@ -51,10 +50,6 @@ export default function HomePage() {
     const tabIconConfig: Partial<
       Record<HomePageTabKey, { icon: JSX.Element; color: string }>
     > = {
-      mind: {
-        icon: <WandSparkles className="w-5 h-5" />,
-        color: "bg-gray-50",
-      },
       "survey-scores": {
         icon: <DataSourceIcon iconType="survey" textPlainColor showType />,
         color: "bg-orange-50",
@@ -110,7 +105,6 @@ export default function HomePage() {
     };
 
     const tabItems: TabItem[] = [
-      makeTab("mind", "MIND", MINDTab, { selectedPatient, clinicianName: userName }),
       makeTab("survey-scores", "Survey Scores", SurveyScoreTab, {
         surveyScoreFacts: survey_data,
       }),
@@ -143,7 +137,7 @@ export default function HomePage() {
           />
         </div>
         <div className="flex-1 min-h-0 flex">
-          <TabsView tabItems={tabItems} defaultTab="mind" isMIND={true} />
+          <TabsView tabItems={tabItems} defaultTab="survey-scores" isMIND={false} />  
         </div>
       </div>
     );
