@@ -46,10 +46,10 @@ const affiliationLogos: Record<string, string> = {
 };
 
 const bibliography = `@article{cao2026more,
-title={More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys},
-author={Cao, Yancheng and Ji, Yishu and Fu, Chris Yue and Dharmavaram, Sahiti and Turchioe, Meghan and Benda, Natalie C and Mamykina, Lena and Sun, Yuling and Xu, Xuhai and others},
-journal={arXiv preprint arXiv:2602.14733},
-year={2026}
+  title={More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare-Seeking Journeys},
+  author={Cao, Yancheng and Ji, Yishu and Fu, Chris Yue and Dharmavaram, Sahiti and Turchioe, Meghan and Benda, Natalie C and Mamykina, Lena and Sun, Yuling and Xu, Xuhai and others},
+  journal={arXiv preprint arXiv:2602.14733},
+  year={2026}
 }`;
 
 export default function PubPage() {
@@ -61,12 +61,13 @@ export default function PubPage() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center px-4 py-8 space-y-8 overflow-y-auto">
       <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] flex flex-col items-center shadow-none bg-transparent border-none">
-        {/* Title */}
+        
+        {/* Title Section */}
         <h1 className="text-4xl font-extrabold mb-2 text-center text-[rgb(91,158,230)] drop-shadow-[0_2px_4px_rgba(91,158,230,0.4)]">
           {abbrevTitle}
         </h1>
 
-        {/* Authors */}
+        {/* Authors Section */}
         <div className="text-base text-muted-foreground mb-1 text-center font-normal flex flex-wrap justify-center gap-x-1">
           {authors.map((author, idx) => (
             <div key={author.name} className="flex items-center whitespace-nowrap">
@@ -84,7 +85,7 @@ export default function PubPage() {
           ))}
         </div>
 
-        {/* Affiliation Icons */}
+        {/* Affiliation Legend */}
         <div className="text-sm text-muted-foreground mb-2 text-center flex flex-wrap justify-center gap-x-4">
           {uniqueAffiliations.map((aff, i) => (
             <span key={aff} className="inline-flex items-center">
@@ -98,7 +99,7 @@ export default function PubPage() {
         </div>
         <div className="text-sm text-muted-foreground mb-2 text-center"><sup>*</sup>Mark corresponding authors</div>
 
-        {/* Buttons Section (PDF Removed) */}
+        {/* Resource Buttons */}
         <div className="flex flex-row flex-wrap gap-4 mb-4 w-full justify-center max-w-2xl mx-auto">
           <Button asChild variant="outline">
             <a href="https://arxiv.org/abs/2602.14733" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 justify-center">
@@ -113,26 +114,38 @@ export default function PubPage() {
           </Button>
         </div>
 
-        {/* Introduction Section */}
+        {/* Abstract and Teaser Image */}
         <section className="w-full mb-6">
           <div className="w-full flex justify-center mb-4 rounded-lg overflow-hidden">
-            <img src={teaser} alt="Teaser" className="w-full max-w-xl h-auto" />
+            <img src={teaser} alt="Project Teaser" className="w-full max-w-xl h-auto" />
           </div>
           <p className="text leading-[1.5] text-justify break-words">
-            Large language models (LLMs) have been increasingly adopted to support patients' healthcare-seeking in recent years...
+            Large language models (LLMs) have been increasingly adopted to support patients' healthcare-seeking in recent years. While prior patient-centered studies have examined the capabilities and experience of LLM-based tools in specific health-related tasks such as information-seeking, diagnosis, or decision-supporting, the inherently longitudinal nature of healthcare in real-world practice has been underexplored. This paper presents a four-week diary study with 25 patients to examine LLMs' roles across healthcare-seeking trajectories. Our analysis reveals that patients integrate LLMs not just as simple decision-support tools, but as dynamic companions that scaffold their journey across behavioral, informational, emotional, and cognitive levels. Meanwhile, patients actively assign diverse socio-technical meanings to LLMs, altering the traditional dynamics of agency, trust, and power in patient-provider relationships. Drawing from these findings, we conceptualize future LLMs as a longitudinal boundary companion that continuously mediates between patients and clinicians throughout longitudinal healthcare-seeking trajectories.
           </p>
         </section>
 
-        {/* Video Section */}
+        {/* Video Presentation Section */}
         <section className="w-full mb-6 flex flex-col">
           <h2 className="text-2xl font-semibold mb-2">Video Teaser</h2>
           <Separator className="mb-4" />
-          <div className="w-full aspect-video max-w-xl mb-4 rounded-lg overflow-hidden bg-black mx-auto">
-            <video src={teaserVideo} controls className="w-full h-full object-cover" poster={teaser} playsInline />
+          
+          <div className="w-full aspect-video max-w-xl mb-3 rounded-lg overflow-hidden bg-black mx-auto shadow-md">
+            <video 
+              src={teaserVideo} 
+              controls 
+              className="w-full h-full object-cover" 
+              poster={teaser} 
+              playsInline 
+            />
           </div>
+
+          {/* Caption with Tailwind underline styling */}
+          <p className="text-sm text-muted-foreground text-center italic max-w-xl mx-auto leading-normal underline underline-offset-4">
+            [Short video shows the core result]
+          </p>
         </section>
 
-        {/* BibTeX Section (Fixed formatting) */}
+        {/* Citation (BibTeX) Section */}
         <section className="w-full">
           <h2 className="text-2xl font-semibold mb-2">BibTeX</h2>
           <Separator className="mb-4" />
@@ -147,6 +160,7 @@ export default function PubPage() {
                 variant="outline"
                 onClick={handleCopyBib}
                 className="absolute top-2 right-2 px-2 py-1 text-xs flex items-center gap-1 bg-white/80 hover:bg-white"
+                aria-label="Copy citation"
               >
                 <Copy className="w-3 h-3" />
                 Copy
@@ -155,7 +169,7 @@ export default function PubPage() {
           </div>
         </section>
 
-        {/* Footer */}
+        {/* Lab Footer */}
         <footer className="w-full mt-5 flex justify-between items-center py-6">
           <a href="https://sea-lab.space/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:underline">
             © SEA Lab 2026
